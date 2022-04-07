@@ -4,7 +4,7 @@ import './SeahorseView.css';
 const SeahorseView = () => {
 
 return (
-    <div className="seahorse_box">
+    <div className="seahorse_box" id="animationSlash">
         
     </div>
 )

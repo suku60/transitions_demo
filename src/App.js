@@ -13,11 +13,12 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+
           <Sidebar/>
+      
           <Routes>
 
-          <Route path="/*" element={<JellyfishView/>}/>
-          
+          {/* <Route path="/*" element={<JellyfishView/>}/> */}
           <Route path="/jellyfish" element={<JellyfishView/>}/>
           <Route path="/puffer" element={<PufferView/>}/>
           <Route path="/seahorse" element={<SeahorseView/>}/>

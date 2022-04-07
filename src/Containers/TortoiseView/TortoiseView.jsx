@@ -4,7 +4,7 @@ import './TortoiseView.css';
 const TortoiseView = () => {
 
 return (
-    <div className="tortoise_box">
+    <div className="tortoise_box" id="animationSlash">
         
     </div>
 )

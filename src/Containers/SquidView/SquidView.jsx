@@ -4,7 +4,7 @@ import './SquidView.css';
 const SquidView = () => {
 
 return (
-    <div className="squid_box">
+    <div className="squid_box" id="animationSlash">
         
     </div>
 )
