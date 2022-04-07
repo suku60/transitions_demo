@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Sidebar from './Components/Sidebar/Sidebar'
+import JellyfishView from './Containers/JellyfishView/JellyfishView'
+import SquidView from './Containers/SquidView/SquidView'
+import SeahorseView from "./Containers/SeahorseView/SeahorseView";
+import TortoiseView from "./Containers/TortoiseView/TortoiseView";
+import PufferView from "./Containers/PufferView/PufferView";
+
+import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+          <Sidebar/>
+          <Routes>
+
+          <Route path="/*" element={<JellyfishView/>}/>
+          
+          <Route path="/jellyfish" element={<JellyfishView/>}/>
+          <Route path="/puffer" element={<PufferView/>}/>
+          <Route path="/seahorse" element={<SeahorseView/>}/>
+          <Route path="/tortoise" element={<TortoiseView/>}/>
+          <Route path="/squid" element={<SquidView/>}/>
+            
+          </Routes>
+
+
+      </BrowserRouter>
+      
     </div>
   );
 }

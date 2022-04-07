@@ -1,0 +1,14 @@
+svg {    
+    height: 3.2vw;
+    width: 3.2vw;
+}
+.nav_button_box {
+    
+    
+    height: 3.2vw;
+    width: 3.2vw;
+
+    background-color: transparent;
+
+    cursor: pointer;
+}
