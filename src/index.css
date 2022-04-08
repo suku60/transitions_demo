@@ -78,38 +78,131 @@ code {
 
 html {
   overflow: hidden;
-
-}
+  
+}  
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;  
   -moz-osx-font-smoothing: grayscale;
-
+  
   overflow: hidden;
-}
+}  
 
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  monospace;
+}    
 
 /* animations */
 
+/* endings */
+
+
+#animationMixEnd {
+  animation: slashEnd steps(4) .5s normal
+             /* transform2 2s normal; */
+}
+
+
+#animationSlashEnd {
+  animation: slashEnd .5s normal;
+}  
+
+
+@keyframes slashEnd {
+  from{width: 100%;
+  opacity: 100%;}
+  to{width: 0%;
+  opacity: 20%;}
+}  
+
+#animationOpacityEnd {
+  animation: opacityEnd .5s normal;
+}  
+
+
+@keyframes opacityEnd {
+  from{opacity: 100%;}
+  to{opacity: 0%}
+}  
+
+#animationTransformEnd {
+  animation: transformEnd .5s normal;
+}  
+
+
+@keyframes transformEnd {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(30deg)}
+}  rotate
+
+#animationTransform2End {
+  animation: transform2End .5s normal;
+}  
+
+
+@keyframes transform2End {
+  from{transform: skew(100deg);}
+  to{transform: skew(0deg)}
+}  
+
+
+
+/* openings */
+
+#animationMix {
+  animation: slash steps(4) .5s normal
+             /* transform2 2s normal; */
+}
+
 
 #animationSlash {
-  animation: slash 1s normal;
-}
+  animation: slash .5s normal;
+}  
 
 
 @keyframes slash {
-  from{width: 0%;}
-  to{width: 100%}
-}
+  from{width: 0%;
+  opacity: 20%;}
+  to{width: 100%;
+  opacity: 100%;}
+}  
+
+#animationOpacity {
+  animation: opacity .5s normal;
+}  
+
+
+@keyframes opacity {
+  from{opacity: 0%;}
+  to{opacity: 100%}
+}  
+
+#animationTransform {
+  animation: transform .5s normal;
+}  
+
+
+@keyframes transform {
+  from{transform: rotate(30deg);}
+  to{transform: rotate(0deg)}
+}  
+
+#animationTransform2 {
+  animation: transform2 .5s normal;
+}  
+
+
+@keyframes transform2 {
+  from{transform: skew(100deg);}
+  to{transform: skew(0deg)}
+}  
+
 /* 
 @keyframes fade {
   from{opacity: 0%;}
