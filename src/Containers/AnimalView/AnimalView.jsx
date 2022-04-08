@@ -6,37 +6,69 @@ import {ReactComponent as JellyfishSvg} from '../../assets/svg/jellyfish.svg';
 import {ReactComponent as PufferSvg} from '../../assets/svg/puffer.svg';
 import {ReactComponent as TortoiseSvg} from '../../assets/svg/tortoise.svg';
 import {ReactComponent as SeahorseSvg} from '../../assets/svg/seahorse.svg';
-// hacer todas las views en un mismo archivo... un hook para las animaciones: easier
-// para hacer el efecto de que la foto anterior se va, hay
-// hay que implementar redux: dependiendo de las props.animation, el render será diferente (cambiará el id de la animación)
 
 const AnimalView = () => {
 
-    const [animal, setAnimal] = useState(false);
+    // animal hook: is set by the first switch, gets the information from the click on the item displayed on the screen.
+    // after that, depending on the value it is having, sets the new screen on the second switch (render).
+    const [animal, setAnimal] = useState("");
 
-    // setAnimal = props;
+    const [animation, setAnimation] = useState("");
+    const [animationDisplayed, setAnimationDisplayed] = useState(animation)
+
 
     const displayAnimal = (desiredAnimal) => {
 
+        // adding an if to evade bugs 
+        if (animationDisplayed === ""){
+
         switch (desiredAnimal){
             case 1:
-               setAnimal("jellyfish");
-               break
+                setAnimal("jellyfish");
+                setAnimationDisplayed(animation)
+                setTimeout(() => {
+                    setAnimationDisplayed("")
+                }, 1000);
+                break
             case 2:
-             setAnimal("puffer");
-             break
+                setAnimal("puffer");
+                setAnimationDisplayed(animation)
+                setTimeout(() => {
+                    setAnimationDisplayed("")
+                }, 1000);
+                break
             case 3:
                 setAnimal("seahorse");
+                setAnimationDisplayed(animation)
+                setTimeout(() => {
+                    setAnimationDisplayed("")
+                }, 1000);
                 break
             case 4:
                 setAnimal("squid");
+                setAnimationDisplayed(animation)
+                setTimeout(() => {
+                    setAnimationDisplayed("")
+                }, 1000);
                 break
             case 5:
                 setAnimal("tortoise");
+                setAnimationDisplayed(animation)
+                setTimeout(() => {
+                    setAnimationDisplayed("")
+                }, 1000);
                 break
 
             }
+
+        }else{
             
+        }
+            
+    }
+
+    const selectAnimation = (desiredAnimation) =>{
+        setAnimation(desiredAnimation)
     }
 
 
@@ -44,7 +76,14 @@ const AnimalView = () => {
     switch (animal) {
         case "jellyfish":
             return  (
-                    <div className="jellyfish_box" id="animationSlash">
+                    <div className="jellyfish_box" id={animationDisplayed}>
+                        <div className="sidebar_inside_home">
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationSlash")}>animation#1</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationOpacity")}>animation#2</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform")}>animation#3</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform2")}>animation#4</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationMix")}>animation#5</div>
+                        </div>
                         <div className="sidebar_inside_home">
                             <div className="sidebar_item_box" onClick={()=>displayAnimal(1)}><JellyfishSvg/></div>
                             <div className="sidebar_item_box" onClick={()=>displayAnimal(2)}><PufferSvg/></div>
@@ -56,7 +95,14 @@ const AnimalView = () => {
                     break
         case "puffer":
             return  (
-                <div className="puffer_box" id="animationSlash">
+                <div className="puffer_box" id={animationDisplayed}>
+                   <div className="sidebar_inside_home">
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationSlash")}>animation#1</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationOpacity")}>animation#2</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform")}>animation#3</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform2")}>animation#4</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationMix")}>animation#5</div>
+                        </div>
                     <div className="sidebar_inside_home">
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(1)}><JellyfishSvg/></div>
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(2)}><PufferSvg/></div>
@@ -68,7 +114,14 @@ const AnimalView = () => {
                 break      
         case "seahorse":
             return  (
-                <div className="seahorse_box" id="animationSlash">
+                <div className="seahorse_box" id={animationDisplayed}>
+                    <div className="sidebar_inside_home">
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationSlash")}>animation#1</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationOpacity")}>animation#2</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform")}>animation#3</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform2")}>animation#4</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationMix")}>animation#5</div>
+                        </div>
                     <div className="sidebar_inside_home">
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(1)}><JellyfishSvg/></div>
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(2)}><PufferSvg/></div>
@@ -80,7 +133,14 @@ const AnimalView = () => {
                 break                 
         case "squid":
             return  (
-                <div className="squid_box" id="animationSlash">
+                <div className="squid_box" id={animationDisplayed}>
+                    <div className="sidebar_inside_home">
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationSlash")}>animation#1</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationOpacity")}>animation#2</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform")}>animation#3</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform2")}>animation#4</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationMix")}>animation#5</div>
+                        </div>
                     <div className="sidebar_inside_home">
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(1)}><JellyfishSvg/></div>
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(2)}><PufferSvg/></div>
@@ -92,7 +152,14 @@ const AnimalView = () => {
                 break
         case "tortoise":
             return  (
-                <div className="tortoise_box" id="animationSlash">
+                <div className="tortoise_box" id={animationDisplayed}>
+                    <div className="sidebar_inside_home">
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationSlash")}>animation#1</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationOpacity")}>animation#2</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform")}>animation#3</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform2")}>animation#4</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationMix")}>animation#5</div>
+                        </div>
                     <div className="sidebar_inside_home">
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(1)}><JellyfishSvg/></div>
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(2)}><PufferSvg/></div>
@@ -104,7 +171,14 @@ const AnimalView = () => {
                 break
         default:
             return  (
-                <div className="sea_box" id="animationSlash">
+                <div className="sea_box" id={animationDisplayed}>
+                    <div className="sidebar_inside_home">
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationSlash")}>animation#1</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationOpacity")}>animation#2</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform")}>animation#3</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform2")}>animation#4</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationMix")}>animation#5</div>
+                        </div>
                     <div className="sidebar_inside_home">
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(1)}><JellyfishSvg/></div>
                         <div className="sidebar_item_box" onClick={()=>displayAnimal(2)}><PufferSvg/></div>

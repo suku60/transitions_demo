@@ -78,38 +78,75 @@ code {
 
 html {
   overflow: hidden;
-
-}
+  
+}  
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;  
   -moz-osx-font-smoothing: grayscale;
-
+  
   overflow: hidden;
-}
+}  
 
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  monospace;
+}    
 
 /* animations */
 
 
+#animationMix {
+  animation: slash steps(4) 2s normal
+             /* transform2 2s normal; */
+}
+
+
 #animationSlash {
   animation: slash 1s normal;
-}
+}  
 
 
 @keyframes slash {
   from{width: 0%;}
   to{width: 100%}
-}
+}  
+
+#animationOpacity {
+  animation: opacity 1s normal;
+}  
+
+
+@keyframes opacity {
+  from{opacity: 0%;}
+  to{opacity: 100%}
+}  
+
+#animationTransform {
+  animation: transform 1s normal;
+}  
+
+
+@keyframes transform {
+  from{transform: skew(30deg);}
+  to{transform: skew(0deg)}
+}  
+
+#animationTransform2 {
+  animation: transform2 2s normal;
+}  
+
+
+@keyframes transform2 {
+  from{transform: skew(1800deg);}
+  to{transform: skew(0deg)}
+}  
+
 /* 
 @keyframes fade {
   from{opacity: 0%;}
