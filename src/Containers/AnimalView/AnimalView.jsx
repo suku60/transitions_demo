@@ -19,7 +19,7 @@ const AnimalView = () => {
     const [animationEnding, setAnimationEnding] = useState("");
     const [animationDisplayed, setAnimationDisplayed] = useState(animation)
 
-
+console.log("animal before function", animal)
     const displayAnimal = (desiredAnimal) => {
 
         console.log("desired animal is... ", desiredAnimal)
