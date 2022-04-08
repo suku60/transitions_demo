@@ -18,7 +18,9 @@ return (
 <div className='sidebar_box'>
             {/* each item inside these boxes will be a svg that serves as an indicator for the photo */}
     <div className="sidebar_items_box">
-        <div className="sidebar_home_box">home</div>
+        {/* <div className="sidebar_home_box">home</div> */}
+        <NavigationButton pathUrl={"/"} viewName={"home"} className="location_item home_item"/>
+
         <div className="sidebar_transitions_choices_box">transition</div>
         <div className="sidebar_locations_box">
         <NavigationButton pathUrl={"/squid"} buttonIcon={<SquidSvg/>} className="location_item"/>

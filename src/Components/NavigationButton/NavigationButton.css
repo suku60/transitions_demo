@@ -9,6 +9,7 @@ svg {
     width: 3.2vw;
 
     background-color: transparent;
+    color: black;
 
     cursor: pointer;
 }
