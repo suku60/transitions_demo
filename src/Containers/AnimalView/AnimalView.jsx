@@ -22,9 +22,10 @@ const AnimalView = () => {
 
     const displayAnimal = (desiredAnimal) => {
 
+        console.log("desired animal is... ", desiredAnimal)
+
         // adding an if to evade bugs 
         if (animationDisplayed === ""){
-            console.log("this is the animationEnding and the animation", animationEnding, animation)
 
         switch (desiredAnimal){
             case 1:
@@ -208,26 +209,6 @@ const AnimalView = () => {
                     </div>
                 </div>);
     }
-
-//     if(animal === "jellyfish") {
-
-//         return (
-//             <div className="jellyfish_box" id="animationSlash">
-        
-//     </div>)
-// } else if(animal === "jellyfish") {
-
-//     return (
-//         <div className="jellyfish_box" id="animationSlash">
-    
-//         </div>)
-// } else if(animal === "jellyfish") {
-
-//     return (
-//         <div className="jellyfish_box" id="animationSlash">
-    
-// </div>)
-// } else   
 }
 
 export default AnimalView;
