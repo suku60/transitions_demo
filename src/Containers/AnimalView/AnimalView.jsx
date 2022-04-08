@@ -23,6 +23,7 @@ console.log("animal before function", animal)
     const displayAnimal = (desiredAnimal) => {
 
         console.log("desired animal is... ", desiredAnimal)
+        console.log("animal we leave is...", animal)
 
         // adding an if to evade bugs 
         if (animationDisplayed === ""){
@@ -59,6 +60,7 @@ console.log("animal before function", animal)
                         setAnimationDisplayed("")
                     }, 500);
                 }, 500);
+                break
             case 4:
                 setAnimationDisplayed(animationEnding)
                 setTimeout(() => {
@@ -68,6 +70,7 @@ console.log("animal before function", animal)
                         setAnimationDisplayed("")
                     }, 500);
                 }, 500);
+                break
             case 5:
                 setAnimationDisplayed(animationEnding)
                 setTimeout(() => {
@@ -77,9 +80,11 @@ console.log("animal before function", animal)
                         setAnimationDisplayed("")
                     }, 500);
                 }, 500);
+                break
 
             }
 
+            console.log("desired animal is..", animal)
         }else{
 
         }

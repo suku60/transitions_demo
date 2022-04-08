@@ -16,6 +16,11 @@
     align-items: flex-end;
     
 }
+.sea_box {
+
+    background-image: url('../../assets/images/default.png');
+    
+}
 
 .jellyfish_box {
 
