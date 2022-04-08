@@ -100,25 +100,81 @@ code {
 
 /* animations */
 
+/* endings */
+
 
 #animationMix {
-  animation: slash steps(4) 2s normal
+  animation: slashEnd steps(4) .5s normal
+             /* transform2 2s normal; */
+}
+
+
+#animationSlashEnd {
+  animation: slash .5s normal;
+}  
+
+
+@keyframes slashEnd {
+  from{width: 100%;
+  opacity: 100%;}
+  to{width: 0%;
+  opacity: 20%;}
+}  
+
+#animationOpacityEnd {
+  animation: opacityEnd .5s normal;
+}  
+
+
+@keyframes opacityEnd {
+  from{opacity: 100%;}
+  to{opacity: 0%}
+}  
+
+#animationTransformEnd {
+  animation: transformEnd .5s normal;
+}  
+
+
+@keyframes transformEnd {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(30deg)}
+}  rotate
+
+#animationTransform2End {
+  animation: transform2 .5s normal;
+}  
+
+
+@keyframes transform2End {
+  from{transform: skew(100deg);}
+  to{transform: skew(0deg)}
+}  
+
+
+
+/* openings */
+
+#animationMix {
+  animation: slash steps(4) .5s normal
              /* transform2 2s normal; */
 }
 
 
 #animationSlash {
-  animation: slash 1s normal;
+  animation: slash .5s normal;
 }  
 
 
 @keyframes slash {
-  from{width: 0%;}
-  to{width: 100%}
+  from{width: 0%;
+  opacity: 20%;}
+  to{width: 100%;
+  opacity: 100%;}
 }  
 
 #animationOpacity {
-  animation: opacity 1s normal;
+  animation: opacity .5s normal;
 }  
 
 
@@ -128,22 +184,22 @@ code {
 }  
 
 #animationTransform {
-  animation: transform 1s normal;
+  animation: transform .5s normal;
 }  
 
 
 @keyframes transform {
-  from{transform: skew(30deg);}
-  to{transform: skew(0deg)}
+  from{transform: rotate(30deg);}
+  to{transform: rotate(0deg)}
 }  
 
 #animationTransform2 {
-  animation: transform2 2s normal;
+  animation: transform2 .5s normal;
 }  
 
 
 @keyframes transform2 {
-  from{transform: skew(1800deg);}
+  from{transform: skew(100deg);}
   to{transform: skew(0deg)}
 }  
 

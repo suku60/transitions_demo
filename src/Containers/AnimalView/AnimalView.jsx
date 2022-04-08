@@ -14,6 +14,7 @@ const AnimalView = () => {
     const [animal, setAnimal] = useState("");
 
     const [animation, setAnimation] = useState("");
+    const [animationEnding, setAnimationEnding] = useState("");
     const [animationDisplayed, setAnimationDisplayed] = useState(animation)
 
 
@@ -24,45 +25,58 @@ const AnimalView = () => {
 
         switch (desiredAnimal){
             case 1:
-                setAnimal("jellyfish");
-                setAnimationDisplayed(animation)
+                setAnimationDisplayed(animationEnding)
                 setTimeout(() => {
-                    setAnimationDisplayed("")
-                }, 1000);
+                    setAnimal("jellyfish");
+                    setAnimationDisplayed(animation)
+                    setTimeout(() => {
+                        setAnimationDisplayed("")
+                    }, 500);
+                }, 500);
+
                 break
             case 2:
-                setAnimal("puffer");
-                setAnimationDisplayed(animation)
+                setAnimationDisplayed(animationEnding)
                 setTimeout(() => {
-                    setAnimationDisplayed("")
-                }, 1000);
+                    setAnimal("puffer");
+                    setAnimationDisplayed(animation)
+                    setTimeout(() => {
+                        setAnimationDisplayed("")
+                    }, 500);
+                }, 500);
                 break
             case 3:
-                setAnimal("seahorse");
-                setAnimationDisplayed(animation)
+                setAnimationDisplayed(animationEnding)
                 setTimeout(() => {
-                    setAnimationDisplayed("")
-                }, 1000);
-                break
+                    setAnimal("seahorse");
+                    setAnimationDisplayed(animation)
+                    setTimeout(() => {
+                        setAnimationDisplayed("")
+                    }, 500);
+                }, 500);
             case 4:
-                setAnimal("squid");
-                setAnimationDisplayed(animation)
+                setAnimationDisplayed(animationEnding)
                 setTimeout(() => {
-                    setAnimationDisplayed("")
-                }, 1000);
-                break
+                    setAnimal("squid");
+                    setAnimationDisplayed(animation)
+                    setTimeout(() => {
+                        setAnimationDisplayed("")
+                    }, 500);
+                }, 500);
             case 5:
-                setAnimal("tortoise");
-                setAnimationDisplayed(animation)
+                setAnimationDisplayed(animationEnding)
                 setTimeout(() => {
-                    setAnimationDisplayed("")
-                }, 1000);
-                break
+                    setAnimal("tortoise");
+                    setAnimationDisplayed(animation)
+                    setTimeout(() => {
+                        setAnimationDisplayed("")
+                    }, 500);
+                }, 500);
 
             }
 
         }else{
-            
+
         }
             
     }
@@ -91,7 +105,8 @@ const AnimalView = () => {
                             <div className="sidebar_item_box" onClick={()=>displayAnimal(4)}><SquidSvg/></div>
                             <div className="sidebar_item_box" onClick={()=>displayAnimal(5)}><TortoiseSvg/></div>
                         </div>
-                    </div>);
+                    </div>
+                    )
                     break
         case "puffer":
             return  (
