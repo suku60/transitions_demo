@@ -7,6 +7,8 @@ import {ReactComponent as PufferSvg} from '../../assets/svg/puffer.svg';
 import {ReactComponent as TortoiseSvg} from '../../assets/svg/tortoise.svg';
 import {ReactComponent as SeahorseSvg} from '../../assets/svg/seahorse.svg';
 
+// generar idea de rafa
+
 const AnimalView = () => {
 
     // animal hook: is set by the first switch, gets the information from the click on the item displayed on the screen.
@@ -22,9 +24,11 @@ const AnimalView = () => {
 
         // adding an if to evade bugs 
         if (animationDisplayed === ""){
+            console.log("this is the animationEnding and the animation", animationEnding, animation)
 
         switch (desiredAnimal){
             case 1:
+                // setAnimationEnding(animation+"End")
                 setAnimationDisplayed(animationEnding)
                 setTimeout(() => {
                     setAnimal("jellyfish");
@@ -83,6 +87,7 @@ const AnimalView = () => {
 
     const selectAnimation = (desiredAnimation) =>{
         setAnimation(desiredAnimation)
+        setAnimationEnding(desiredAnimation+"End")
     }
 
 

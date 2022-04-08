@@ -103,14 +103,14 @@ code {
 /* endings */
 
 
-#animationMix {
+#animationMixEnd {
   animation: slashEnd steps(4) .5s normal
              /* transform2 2s normal; */
 }
 
 
 #animationSlashEnd {
-  animation: slash .5s normal;
+  animation: slashEnd .5s normal;
 }  
 
 
@@ -142,7 +142,7 @@ code {
 }  rotate
 
 #animationTransform2End {
-  animation: transform2 .5s normal;
+  animation: transform2End .5s normal;
 }  
 
 
