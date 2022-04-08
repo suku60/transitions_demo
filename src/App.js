@@ -8,6 +8,7 @@ import TortoiseView from "./Containers/TortoiseView/TortoiseView";
 import PufferView from "./Containers/PufferView/PufferView";
 
 import './App.css'
+import AnimalView from "./Containers/AnimalView/AnimalView";
 
 function App() {
   return (
@@ -18,7 +19,10 @@ function App() {
       
           <Routes>
 
-          {/* <Route path="/*" element={<JellyfishView/>}/> */}
+          <Route path="/" element={<AnimalView/>}/>
+
+          <Route path="/*" element={<AnimalView/>}/>
+
           <Route path="/jellyfish" element={<JellyfishView/>}/>
           <Route path="/puffer" element={<PufferView/>}/>
           <Route path="/seahorse" element={<SeahorseView/>}/>

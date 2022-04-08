@@ -11,6 +11,9 @@ import NavigationButton from '../NavigationButton/NavigationButton';
 
 const Sidebar = () => {
 
+
+    // para hacer varios efectos de transiciones, tendrá que haber un hook en los containers que cambie
+    // el id de las animaciones pero que ese hook se pueda modificar sólo desde el sidebar
 return (
 <div className='sidebar_box'>
             {/* each item inside these boxes will be a svg that serves as an indicator for the photo */}

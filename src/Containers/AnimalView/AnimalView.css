@@ -1,0 +1,43 @@
+.sea_box, .jellyfish_box, .puffer_box, .squid_box, .tortoise_box,.seahorse_box {
+    /* background-image: url('../../assets/images/animal.png'); */
+    
+    background-color: red;
+    
+    height: 100vh;
+    width: 95vw;
+    
+    position: relative;
+    z-index: 9;
+    
+}
+
+.jellyfish_box {
+
+    background-image: url('../../assets/images/jellyfish.png');
+    
+}
+
+.puffer_box {
+
+    background-image: url('../../assets/images/puffer.png');
+    
+}
+
+.squid_box {
+
+    background-image: url('../../assets/images/squid.png');
+    
+}
+
+.tortoise_box {
+
+    background-image: url('../../assets/images/tortoise.png');
+    
+}
+
+.seahorse_box {
+
+    background-image: url('../../assets/images/seahorse.png');
+    
+}
+
