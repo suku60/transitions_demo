@@ -102,13 +102,13 @@ code {
 
 /* endings */
 
-
+/* number 5 */
 #animationMixEnd {
   animation: slashEnd steps(4) .5s normal
              /* transform2 2s normal; */
 }
 
-
+/* number 1 */
 #animationSlashEnd {
   animation: slashEnd .5s normal;
 }  
@@ -121,6 +121,7 @@ code {
   opacity: 20%;}
 }  
 
+/* number 2 */
 #animationOpacityEnd {
   animation: opacityEnd .5s normal;
 }  
@@ -131,16 +132,20 @@ code {
   to{opacity: 0%}
 }  
 
+/* number 3 */
 #animationTransformEnd {
   animation: transformEnd .5s normal;
 }  
 
 
 @keyframes transformEnd {
-  from{transform: rotate(0deg);}
-  to{transform: rotate(30deg)}
+  from{transform: rotate(0deg);
+  width: 100%;}
+  to{transform: rotate(666deg);
+  width: 0%;}
 }  rotate
 
+/* number 4 */
 #animationTransform2End {
   animation: transform2End .5s normal;
 }  
@@ -155,12 +160,14 @@ code {
 
 /* openings */
 
+/* number 5 */
 #animationMix {
   animation: slash steps(4) .5s normal
              /* transform2 2s normal; */
 }
 
 
+/* number 1 */
 #animationSlash {
   animation: slash .5s normal;
 }  
@@ -173,6 +180,7 @@ code {
   opacity: 100%;}
 }  
 
+/* number 2 */
 #animationOpacity {
   animation: opacity .5s normal;
 }  
@@ -183,16 +191,20 @@ code {
   to{opacity: 100%}
 }  
 
+/* number 3 */
 #animationTransform {
   animation: transform .5s normal;
 }  
 
 
 @keyframes transform {
-  from{transform: rotate(30deg);}
-  to{transform: rotate(0deg)}
+  from{transform: rotate(666deg);
+  width: 0%;}
+  to{transform: rotate(0deg);
+  width: 100%;}
 }  
 
+/* number 4 */
 #animationTransform2 {
   animation: transform2 .5s normal;
 }  
@@ -202,9 +214,3 @@ code {
   from{transform: skew(100deg);}
   to{transform: skew(0deg)}
 }  
-
-/* 
-@keyframes fade {
-  from{opacity: 0%;}
-  to{opacity: 100%;}
-} */
