@@ -19,6 +19,11 @@ const AnimalView = () => {
     const [animation, setAnimation] = useState("");
     const [animationEnding, setAnimationEnding] = useState("");
     const [animationDisplayed, setAnimationDisplayed] = useState(animation)
+    const [bgAnimationItem1, setBgAnimationItem1] = useState("");
+    const [bgAnimationItem2, setBgAnimationItem2] = useState("");
+    const [bgAnimationItem3, setBgAnimationItem3] = useState("");
+    const [bgAnimationItem4, setBgAnimationItem4] = useState("");
+    const [bgAnimationItem5, setBgAnimationItem5] = useState("");
 
     const [selectedAnimation, setSelectedAnimation] = useState("")
 
@@ -96,21 +101,67 @@ console.log("animal before function", animal)
 
     const selectAnimation = (desiredAnimation) =>{
         setAnimation(desiredAnimation)
-        setAnimationEnding(desiredAnimation+"End")
+        setAnimationEnding(desiredAnimation+"End");
+        // setTimeout(() => {
+        //     switch (animation) {
+        //     case "animationSlash":
+        //         setBgAnimationItem1('#1ab8ec')
+        //         setBgAnimationItem2("whitesmoke")
+        //         setBgAnimationItem3("whitesmoke")
+        //         setBgAnimationItem4("whitesmoke")
+        //         setBgAnimationItem5("whitesmoke")
+        //         break
+        //         case "animationOpacity":
+        //             setBgAnimationItem1("whitesmoke")
+        //             setBgAnimationItem2('#1ab8ec')
+        //             setBgAnimationItem3("whitesmoke")
+        //             setBgAnimationItem4("whitesmoke")
+        //             setBgAnimationItem5("whitesmoke")
+        //             break
+        //             case "animationTransform":
+        //                 setBgAnimationItem1("whitesmoke")
+        //                 setBgAnimationItem2("whitesmoke")
+        //                 setBgAnimationItem3('#1ab8ec')
+        //                 setBgAnimationItem4("whitesmoke")
+        //                 setBgAnimationItem5("whitesmoke")
+        //                 break
+        //                 case "animationTransform2":
+        //                     setBgAnimationItem1("whitesmoke")
+        //                     setBgAnimationItem2("whitesmoke")
+        //                     setBgAnimationItem3("whitesmoke")
+        //                     setBgAnimationItem4('#1ab8ec')
+        //                     setBgAnimationItem5("whitesmoke")
+                            
+        //                     break
+        //                     case "animationMix":
+        //                         setBgAnimationItem1("whitesmoke")
+        //                         setBgAnimationItem2("whitesmoke")
+        //                         setBgAnimationItem3("whitesmoke")
+        //         setBgAnimationItem4("whitesmoke")
+        //         setBgAnimationItem5('#1ab8ec')
+        
+        //         break
+        //     default:
+        //         setBgAnimationItem1('')
+                
+                
+                
+        //     }
+        // }, 500);
     }
-
-
+    
+    
 
     switch (animal) {
         case "jellyfish":
             return  (
                     <div className="jellyfish_box" id={animationDisplayed}>
                         <div className="sidebar_inside_home animations_sidebar">
-                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationMix")}>animation#5</div>
                             <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationSlash")}>animation#1</div>
                             <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationOpacity")}>animation#2</div>
                             <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform")}>animation#3</div>
                             <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationTransform2")}>animation#4</div>
+                            <div className="sidebar_item_box item_text" onClick={()=>selectAnimation("animationMix")}>animation#5</div>
                         </div>
                         <div className="sidebar_inside_home">
                             <div className="sidebar_item_box selected" onClick={()=>displayAnimal(1)}><JellyfishSvg/></div>
