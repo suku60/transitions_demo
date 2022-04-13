@@ -7,7 +7,11 @@ import {ReactComponent as PufferSvg} from '../../assets/svg/puffer.svg';
 import {ReactComponent as TortoiseSvg} from '../../assets/svg/tortoise.svg';
 import {ReactComponent as SeahorseSvg} from '../../assets/svg/seahorse.svg';
 
-// generar idea de rafa
+// generar idea de rafa / use svg as background and a fixed deep sea background
+
+const sidebar = () => {
+
+}
 
 const AnimalView = () => {
 
